@@ -11,8 +11,8 @@ export default function SelectionView () {
 
         fetch("https://playground.devskills.co/api/rest/meal-roulette-app/meals")
             .then((response) => response.json())
-            .then((json) => {setMeal(json)
-                console.log(json);
+            .then((data) => {setMeal(data)
+                console.log(data);
         })
 
     }, [])
@@ -22,7 +22,7 @@ export default function SelectionView () {
         <View style={styles.container}>
             <Text>SelectionView</Text>
             <View>
-                <Text>{meal}</Text>
+                <Text>{meal.title}</Text>
             </View>
             <StatusBar style="auto" />
         </View>
